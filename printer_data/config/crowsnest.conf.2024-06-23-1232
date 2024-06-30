@@ -40,8 +40,8 @@ mode: ustreamer                         # ustreamer - Provides mjpg and snapshot
 enable_rtsp: false                      # If camera-streamer is used, this enables also usage of an rtsp server
 rtsp_port: 8554                         # Set different ports for each device!
 port: 8080                              # HTTP/MJPG Stream/Snapshot Port
-device: /dev/v4l/by-id/usb-SHENZHEN_EMEET_TECHNOLOGY_CO._LTD._HD_Webcam_eMeet_C960_Ucamera002-video-index0                     # See Log for available ...
-resolution: 1280x720                     # widthxheight format
-max_fps: 24                            # If Hardware Supports this it will be forced, otherwise ignored/coerced.
+device: /dev/video0                     # See Log for available ...
+resolution: 1600x900                    # widthxheight format
+max_fps: 24 
 #custom_flags:                          # You can run the Stream Services with custom flags.
-#v4l2ctl:                               # Add v4l2-ctl parameters to setup your camera, see Log what your cam is capable of.
+v4l2ctl: brightness=80,contrast=128     #-- gain 2                             # Add v4l2-ctl parameters to setup your camera, see Log what your cam is capable of.
