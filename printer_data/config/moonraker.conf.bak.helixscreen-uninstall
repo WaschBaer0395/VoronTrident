@@ -121,15 +121,13 @@ path: ~/klipper-led_effect
 origin: https://github.com/julianschill/klipper-led_effect.git
 is_system_service: False
 
-
 # HelixScreen Update Manager
 # Added by HelixScreen installer - enables one-click updates from Mainsail/Fluidd
 [update_manager helixscreen]
-type: zip
+type: git_repo
 channel: stable
-repo: prestonbrown/helixscreen
-path: /home/Trident/helixscreen
+path: /home/Trident/helixscreen-repo
+origin: https://github.com/prestonbrown/helixscreen.git
+primary_branch: main
 managed_services: helixscreen
-persistent_files:
-    config/helixconfig.json
-    config/.disabled_services
+install_script: scripts/install.sh
